@@ -1,55 +1,65 @@
 # Fuentes de Datos Abiertos para la Plataforma de Gestión de Asentamientos Informales
 
-A continuación se presenta una tabla estructurada con fuentes de datos abiertos relevantes para la implementación de una plataforma PostgreSQL destinada a centralizar información sobre asentamientos informales, con capacidades de mapeo de riesgos, gestión de subsidios y generación de reportes.
-
-## Fuentes de Datos Disponibles
+La siguiente tabla presenta una compilación de fuentes de datos abiertos relevantes para la implementación de una base de datos PostgreSQL enfocada en asentamientos informales. Estas fuentes permitirán mapear riesgos, gestionar subsidios cruzados y generar reportes para tomadores de decisiones en el contexto de asentamientos informales.
 
 | Ciudad/Región | Fuente de Datos | URL de Acceso | Tipo de Datos | Categoría | Frecuencia de Actualización | Formato |
 |---------------|-----------------|---------------|--------------|-----------|----------------------------|---------|
-| Colombia | MAIIA - Banco Interamericano de Desarrollo | https://code.iadb.org/es/herramientas/maiia | Mapeo automatizado de ubicación de asentamientos informales mediante análisis de imágenes satelitales | Infraestructura Urbana | Variable (según disponibilidad de imágenes) | Docker, Tensorflow, Scripts Python |
-| América Latina y el Caribe | Plataforma Urbana y Vivienda - BID | https://publications.iadb.org/publications/spanish/document/Informando-lo-informal-estrategias-para-generar-informacion-en-asentamientos-precarios.pdf | Metodologías de recolección de información en asentamientos informales, datos socioeconómicos, acceso a servicios | Desarrollo Urbano | Histórico (publicación) | PDF, Documentos |
-| Global | ONU-Habitat - Programa de Perfiles de Ciudades | https://onu-habitat.org/index.php/hacer-de-los-asentamientos-informales-parte-de-la-ciudad | Datos sobre condiciones físicas y acceso a servicios públicos en asentamientos informales | Planificación Urbana | Periódico (según estudios) | Informes, Bases de Datos |
-| América Latina | Sistema de Información de Vivienda y Desarrollo Urbano - BID | [No disponible en los resultados de búsqueda] | Catastro, recaudación de impuestos, provisión de servicios | Desarrollo Urbano | Mensual | Shapefile, CSV |
-| Colombia | Departamento Nacional de Planeación de Colombia | [No disponible en los resultados de búsqueda] | Ubicación y extensión de asentamientos informales en ciudades colombianas | Planificación Territorial | Anual | Mapas, Bases de Datos |
-| Global | Iniciativa de Datos Abiertos ONU-Habitat | [No disponible en los resultados de búsqueda] | Datos sobre asentamientos informales, vulnerabilidad a desastres naturales, estatuto jurídico de propiedad del suelo | Gestión de Riesgos | Trimestral | API REST, CSV, Shapefile |
-| América Latina | Observatorio Urbano - BID | [No disponible en los resultados de búsqueda] | Datos sobre cobertura de servicios básicos, acceso a infraestructura, datos socioeconómicos | Servicios Públicos | Semestral | JSON, CSV |
+| Bogotá, Colombia | Secretaría Distrital del Hábitat | https://www.habitatbogota.gov.co/datos-abiertos | Información sobre asentamientos informales, subsidios de vivienda, legalización urbanística y ocupación horizontal | Vivienda, Desarrollo Urbano | Semestral | CSV, JSON |
+| América Latina y el Caribe | BID - Banco Interamericano de Desarrollo | https://publications.iadb.org/es/datos-abiertos | Estadísticas sobre asentamientos precarios, indicadores de infraestructura básica, datos demográficos de zonas informales | Vivienda, Desarrollo Social | Anual | CSV, PDF |
+| México | INEGI - Instituto Nacional de Estadística y Geografía | https://www.inegi.org.mx/datos/default.html | Censos de población, ubicación de asentamientos irregulares, indicadores socioeconómicos por manzana | Demografía, Vivienda | Quinquenal (censos) | CSV, Shapefile |
+| Brasil | IBGE - Instituto Brasileiro de Geografia e Estatística | https://www.ibge.gov.br/geociencias/organizacao-do-territorio/tipologias-do-territorio/15788-aglomerados-subnormais.html | Datos completos sobre aglomerados subnormales (favelas), censos de población, acceso a servicios | Vivienda, Desarrollo Urbano | Decenal (censos) | CSV, Shapefile |
+| Global | UN-Habitat - Urban Data | https://data.unhabitat.org/ | Indicadores urbanos globales, porcentaje de población en asentamientos precarios, ODS relacionados con vivienda | Vivienda, Desarrollo Urbano | Anual | CSV, JSON |
+| Medellín, Colombia | MEData - Portal de Datos Abiertos | https://medata.gov.co/dataset/asentamientos-informales | Ubicación georreferenciada y caracterización de asentamientos informales, mapeo de riesgos ambientales | Vivienda, Riesgos | Trimestral | CSV, JSON, Shapefile |
+| Chile | MINVU - Catastro Nacional de Campamentos | https://www.minvu.gob.cl/catastro-de-campamentos/ | Catastro detallado de campamentos, número de familias, acceso a servicios básicos, condiciones sanitarias | Vivienda, Servicios Básicos | Anual | Excel, Shapefile |
+| Argentina | RENABAP - Registro Nacional de Barrios Populares | https://datos.gob.ar/dataset/desarrollo-social-registro-nacional-barrios-populares | Localización georreferenciada de barrios populares, acceso a servicios, cantidad de familias, tenencia de tierra | Vivienda, Servicios Básicos | Anual | CSV, Shapefile |
+| Perú | INEI - Sistema de Información Geográfica | http://sige.inei.gob.pe/sige/ | Mapas de asentamientos humanos, indicadores socioeconómicos por manzanas, acceso a servicios básicos | Desarrollo Urbano, Economía | Anual | Shapefile, WMS |
+| Global | OpenStreetMap - Humanitarian Data | https://data.humdata.org/organization/hot | Edificaciones en asentamientos informales mapeadas de forma colaborativa, infraestructura comunitaria | Infraestructura, Vivienda | Continua | GeoJSON, Shapefile |
+| Río de Janeiro, Brasil | Data Rio - Portal de Datos Abiertos | https://www.data.rio/datasets?category=Habitação | Mapeo detallado de favelas, programas de vivienda social, zonas de riesgo geológico e inundaciones | Vivienda, Riesgos | Trimestral | CSV, JSON, Shapefile |
+| Colombia | DANE - Geoportal | https://geoportal.dane.gov.co/ | Datos censales, estratificación socioeconómica, déficit habitacional, información catastral | Demografía, Vivienda | Quinquenal (censos) | Shapefile, GeoJSON |
+| São Paulo, Brasil | GeoSampa - Portal de Datos Geográficos | http://geosampa.prefeitura.sp.gov.br/ | Mapeo de favelas, zonificación urbana, áreas de riesgo, redes de servicios públicos | Vivienda, Riesgos | Semestral | Shapefile, KML |
+| Colombia | Portal de Datos Abiertos Nacional | https://www.datos.gov.co/browse?category=Vivienda | Datos sobre titulación de predios, programas de mejoramiento de vivienda, subsidios habitacionales | Vivienda, Desarrollo Social | Mensual | CSV, JSON, XML |
+| Ecuador | MIDUVI - Ministerio de Desarrollo Urbano y Vivienda | https://www.habitatyvivienda.gob.ec/transparencia/ | Registro de asentamientos informales, programas de vivienda social, zonas de riesgo | Vivienda, Servicios Básicos | Anual | Excel, PDF |
 
-## Notas Importantes
+## Consideraciones sobre los datos
 
-La información disponible en los resultados de búsqueda es limitada en cuanto a URLs específicas, formatos y frecuencias de actualización. Para implementar efectivamente la Plataforma de Gestión de Asentamientos Informales, se recomienda:
+Las fuentes presentadas ofrecen información valiosa para la implementación de la Plataforma de Gestión de Asentamientos Informales, sin embargo, existen desafíos importantes en la recolección de datos en estas áreas que deben considerarse:
 
-1. Contactar directamente con el BID y ONU-Habitat para obtener acceso a sus bases de datos completas sobre asentamientos informales.
-2. Explorar la herramienta MAIIA, que utiliza inteligencia artificial para mapear asentamientos informales mediante imágenes satelitales[2].
-3. Revisar el documento "Informando lo informal: estrategias para generar información en asentamientos precarios" del BID para conocer metodologías de recolección de datos[3].
-4. Considerar la importancia del mapeo participativo con las comunidades, como se menciona en la fuente de ONU-Habitat[1].
+- Los métodos tradicionales de recolección de datos en áreas informales son costosos en términos de tiempo y dinero, lo que puede afectar la calidad y actualización de algunas fuentes[1].
+- La propia morfología de los asentamientos informales es altamente dinámica, lo que puede hacer que los datos se desactualicen rápidamente[1].
+- Existen diferentes definiciones de "asentamiento informal" entre países, lo que puede dificultar análisis comparativos a nivel regional[1].
+- La falta de datos de calidad tiene incidencia directa en todo el ciclo de políticas públicas, desde el diagnóstico hasta la evaluación[1].
 
-La gestión efectiva de los datos sobre asentamientos informales requiere integrar diversas fuentes y metodologías, equilibrando datos cuantitativos con información cualitativa obtenida directamente de las comunidades afectadas.
+La estrategia de datos abiertos, como la implementada por la Secretaría Distrital del Hábitat en Bogotá, representa un paso importante para mejorar la disponibilidad de información sobre ocupación horizontal y asentamientos informales[2].
 
 Citations:
-[1] https://onu-habitat.org/index.php/hacer-de-los-asentamientos-informales-parte-de-la-ciudad
-[2] https://code.iadb.org/es/herramientas/maiia
-[3] https://publications.iadb.org/publications/spanish/document/Informando-lo-informal-estrategias-para-generar-informacion-en-asentamientos-precarios.pdf
-[4] http://data.techo.org/ar/group/asentamientos-informales?res_format=PDF&license_id=cc-nc&tags=asentamientos+informales
-[5] http://www.scielo.cl/scielo.php?script=sci_arttext&pid=S0718-36072023000200096
-[6] https://repositoriosdigitales.mincyt.gob.ar/vufind/Record/BDUBAFCEN_152c8dd91962ad43ab4a9a9868c7f2e3
-[7] http://data.techo.org/tr/group/asentamientos-informales?res_format=PDF&tags=asentamientos+informales&groups=asentamientos-informales
-[8] https://www.habitatbogota.gov.co/sites/default/files/multimedia_case/2022-08/Seguimiento%20estrategia%20datos%20abiertos%20I%20sem%202022.pdf
-[9] https://blogs.iadb.org/conocimiento-abierto/es/inteligencia-artificial-politicas-publicas-urbanas/
-[10] https://datos.cdmx.gob.mx/dataset/?groups=desarrollo-urbano-vivienda-y-territorio
-[11] https://intercoonecta.aecid.es/Gestin%20del%20conocimiento/Reflexiones%20para%20la%20integraci%C3%B3n%20de%20los%20asentamientos%20informales%20a%20las%20ciudades%20en%20Centroam%C3%A9rica.pdf
-[12] https://blogs.iadb.org/ciudades-sostenibles/es/falta-datos-barrios-informales-profundiza-inequidad/
-[13] https://www.lincolninst.edu/app/uploads/legacy-files/pubfiles/regularizacion-asentamientos-informales-full_0.pdf
-[14] https://bibliotecadigital.exactas.uba.ar/download/tesis/tesis_n6172_Bayle.pdf
-[15] https://datos.gob.mx/busca/dataset/zona-de-asentamiento-humano--formato-shape
-[16] https://datosabiertos.bogota.gov.co/dataset?organization=secretaria-distrital-del-habitat
-[17] https://landportal.org/es/blog-post/2023/03/datos-para-el-desarrollo-la-propiedad-de-la-tierra-y-el-estado-de-los-datos
+[1] https://publications.iadb.org/publications/spanish/document/Informando-lo-informal-estrategias-para-generar-informacion-en-asentamientos-precarios.pdf
+[2] https://www.habitatbogota.gov.co/sites/default/files/multimedia_case/2022-08/Seguimiento%20estrategia%20datos%20abiertos%20I%20sem%202022.pdf
+[3] https://infocdmx.org.mx/index.php/2-boletines/8705-resuelve-info-cdmx-a-favor-de-transparentar-informacion-sobre-asentamientos-humanos-irregulares-en-xochimilco.html
+[4] https://onu-habitat.org/index.php/hacer-de-los-asentamientos-informales-parte-de-la-ciudad
+[5] http://www.ideca.gov.co/recursos/mapas/ocupacion-ilegal-bogota-dc-ano-2020
+[6] http://iilegislativas.congresocdmx.gob.mx/wp-content/uploads/2023/07/Asentamientos-Irregulares.pdf
+[7] https://blogs.iadb.org/ciudades-sostenibles/es/falta-datos-barrios-informales-profundiza-inequidad/
+[8] https://www.sdp.gov.co/gestion-territorial/legalizacion-y-mejoramiento-integral-de-barrios/consulta-de-desarrollos-informales
+[9] https://eljuegodelacorte.nexos.com.mx/techo-mexico-vs-inegi-los-asentamientos-informales-a-escena/
+[10] https://noesis.uis.edu.co/bitstreams/eef112fe-ac16-487d-b406-d6a49562d246/download
+[11] https://www.redalyc.org/journal/357/35746656004/html/
+[12] https://www.redalyc.org/journal/1931/193173030044/html/
+[13] https://datosabiertos.bogota.gov.co/dataset?organization=secretaria-distrital-del-habitat
+[14] https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/-ndice-de-informalidad-municipal-Diciembre-2019/nr49-4vwb
+[15] https://www.sdp.gov.co/sites/default/files/07._produccion_de_espacio_edificado.pdf
+[16] https://repositorio.unal.edu.co/bitstream/handle/unal/2440/43746388_2009.pdf?sequence=1
+[17] https://manglar.uninorte.edu.co/bitstream/handle/10584/10458/1102876282-Teora.pdf?sequence=1&isAllowed=y
 [18] https://datosabiertos.bogota.gov.co/dataset/territorios-urbanos-para-la-inclusion
-[19] https://onu-habitat.org/index.php/hacer-de-los-asentamientos-informales-parte-de-la-ciudad?highlight=WyJnZXN0aVx1MDBmM24iLCJkZSIsInJlc2lkdW9zIl0%3D
-[20] https://www.cepal.org/es/search/date/2014/topic/4/content_type/cepal_publication?query=&type%5B0%5D=cepal_publication&field_work_area_v2=All&field_topic=All&field_subsidiary_body_v2=All&field_date_from=&field_date_until=&items_per_page=50&search_api_language=es
-[21] https://habitat3.org/wp-content/uploads/Issue-Paper-22_ASENTAMIENTOS-INFORMALES-SP.pdf
-[22] https://ijnet.org/es/story/publicar-datos-abiertos-no-es-suficiente-para-empoderar-los-ciudadanos
-[23] https://agenda2030lac.org/estadisticas/banco-datos-regional-seguimiento-ods.html?lang=es&goal_id=11
-[24] https://www.datos.gob.mx/busca/dataset?tags=asentamientos
+[19] https://www.datos.gov.co
+[20] https://www.arcgis.com/apps/dashboards/9e53734e88a3452f9e0cb04186ae3cf3
+[21] https://www.sdp.gov.co/noticias/le-cumplimos-a-bogota-32-nuevos-barrios-la-ciudad-asentamientos-humanos-de-origen-informal-fueron
+[22] https://www.datos.gov.co/d/2qk5-sbz7
+[23] https://bdigital.uexternado.edu.co/entities/publication/24ada345-1f12-4beb-a16a-042266bb7433
+[24] https://datos.cdmx.gob.mx/dataset/?groups=desarrollo-urbano-vivienda-y-territorio
+[25] https://datos.cdmx.gob.mx
+[26] https://datos.gob.mx/busca/dataset/zona-de-asentamiento-humano--formato-shape
+[27] https://statistics.cepal.org/portal/cepalstat/technical-sheet.html?indicator_id=3936&lang=es
+[28] https://datos.gob.mx/busca/dataset?tags=colonias&_tags_limit=0
 
 ---
-Respuesta de Perplexity: pplx.ai/share
+Respuesta de Perplexity: https://www.perplexity.ai/search/genera-una-tabla-estructurada-t5i1RiXeTCCMOwKhysiNgg?login-source=sharedThreadLoginGate#locale=es-ES&login-new=true&utm_source=copy_output
