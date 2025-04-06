@@ -1,0 +1,43 @@
+#SELECCIÓN DE DATOS RELEVANTES DEL GEOJSON PARA EL PROYECTO
+
+ Estas fuentes permitirán mapear riesgos, gestionar subsidios cruzados y generar reportes para tomadores de decisiones en el contexto de asentamientos informales.
+
+
+Aquí tienes la tabla estructurada con los datos proporcionados:
+
+| **Campo**       | **Descripción**                                              | **Utilidad en el Proyecto**                                      |
+|------------------|-------------------------------------------------------------|------------------------------------------------------------------|
+| **id_ocupaci**   | Código identificador único de cada ocupación                 | Identificación y seguimiento de asentamientos individuales       |
+| **tipo_ocupa**   | Tipo de ocupación (por ejemplo, invasión, ampliación, etc.)  | Clasificación del tipo de riesgo o necesidad de intervención     |
+| **estado_ocu**   | Estado actual de la ocupación (activo, en desuso, etc.)      | Determinar si la ocupación sigue siendo relevante para análisis  |
+| **habitabili**   | Condición de habitabilidad (segura, insegura, no habitable)  | Evaluación del riesgo y condiciones de vida                     |
+| **material_c**   | Material de construcción de las viviendas                   | Indicador de vulnerabilidad estructural                         |
+| **estructura**   | Tipo de estructura de la construcción                       | Análisis de riesgo estructural y soporte técnico                |
+| **numero_pis**   | Número de pisos                                             | Puede influir en el nivel de riesgo estructural                 |
+| **cubierta**     | Tipo de cubierta (techo)                                    | Relacionado con protección climática y vulnerabilidad           |
+| **uso_ocupac**   | Uso del espacio ocupado (residencial, comercial, mixto)     | Define prioridad de intervención según uso                      |
+| **geometry**     | Coordenadas geográficas de cada punto                       | Esencial para visualización y análisis espacial                 |
+
+Esta tabla puede ser útil para organizar datos relacionados con ocupaciones y asentamientos, facilitando su análisis en proyectos urbanos o sociales.
+
+Aquí tienes la tabla estructurada con los datos proporcionados:
+
+| **Campo**            | **Descripción**                            | **Utilidad en el Proyecto**                     |
+|-----------------------|--------------------------------------------|-------------------------------------------------|
+| **coordenadas**       | Punto geográfico (lat/long)               | Mapeo espacial para análisis de riesgo          |
+| **tipo_ocupacion**    | Categoría de ocupación ilegal             | Priorización de intervenciones legales          |
+| **riesgo_inundacion** | Indicador de vulnerabilidad hídrica       | Alertas tempranas y planificación urbana        |
+| **subsidios_vivienda**| Número de familias con ayudas             | Gestión de recursos y programas sociales        |
+
+Esta tabla puede servir como base para proyectos relacionados con la gestión territorial, la planificación urbana y la implementación de políticas sociales.
+
+
+
+
+
+Citations:
+[1] https://datosabiertos.bogota.gov.co/dataset/ocupaciones
+[2] https://www.datos.gov.co/es/profile/wadf-46hk
+
+---
+Respuesta de Perplexity: pplx.ai/share 
